@@ -1,0 +1,17 @@
+model AppPlan {
+  id            BigInt   @id @default(autoincrement())
+  shopId        BigInt
+  planName      String
+  amount        Int
+  status        String
+  currency      String
+  capped_amount String?
+  planId        String   @unique
+  shopName      String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  shop          shopInfo @relation(fields: [shopId], references: [id])
+
+  @@index([shopName])
+  @@index([shopId], map: "AppPlan_shopId_fkey")
+}

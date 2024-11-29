@@ -1,0 +1,3 @@
+DATABASE_URL="mysql://username:password@localhost:3306/dbname"
+DISCORD_WEBHOOK_URL=
+APP_NAME=

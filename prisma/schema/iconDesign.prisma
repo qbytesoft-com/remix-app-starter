@@ -1,0 +1,14 @@
+model IconDesign {
+  id         BigInt    @id @default(autoincrement())
+  shopId     BigInt    @unique
+  shopName   String    @db.VarChar(255)
+  visibileOn Int       @db.TinyInt
+  settings   Json
+  customCSS  String?   @db.Text
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  deletedAt  DateTime?
+  shop       shopInfo  @relation(fields: [shopId], references: [id])
+
+  @@index([shopName])
+}

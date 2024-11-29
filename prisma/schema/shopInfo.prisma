@@ -14,8 +14,6 @@ model shopInfo {
   updatedAt       DateTime    @default(now()) @updatedAt
   deletedAt       DateTime?
   appPlans        AppPlan[]
-  icons           Icon[]
-  iconDesign      IconDesign?
 
   @@index([name])
   @@index([email])

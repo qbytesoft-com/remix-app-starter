@@ -1,17 +1,17 @@
 model shopInfo {
-  id              BigInt      @id @default(autoincrement())
-  name            String      @unique @db.VarChar(255)
-  email           String?     @db.VarChar(100)
-  phone           String?     @db.VarChar(20)
-  contactEmail    String?     @db.VarChar(100)
-  address         String?     @db.Text
-  country         String?     @db.VarChar(100)
-  myshopifyDomain String      @db.VarChar(255)
-  url             String      @db.VarChar(255)
-  shopOwnerName   String?     @db.VarChar(100)
+  id              BigInt    @id @default(autoincrement())
+  name            String    @unique @db.VarChar(255)
+  email           String?   @db.VarChar(100)
+  phone           String?   @db.VarChar(20)
+  contactEmail    String?   @db.VarChar(100)
+  address         String?   @db.Text
+  country         String?   @db.VarChar(100)
+  myshopifyDomain String    @db.VarChar(255)
+  url             String    @db.VarChar(255)
+  shopOwnerName   String?   @db.VarChar(100)
   shopDetail      Json?
-  createdAt       DateTime    @default(now())
-  updatedAt       DateTime    @default(now()) @updatedAt
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @default(now()) @updatedAt
   deletedAt       DateTime?
   appPlans        AppPlan[]
 
